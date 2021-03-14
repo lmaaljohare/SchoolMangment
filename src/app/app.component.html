@@ -1,0 +1,74 @@
+<!--  <form >
+    <div class="form-group">
+        <label for="name">Student Name :</label>
+        <input id="name"type="text" class="form-control" ngModel name='name' ngModel placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="id">Student Id : </label>
+        <input id="id"type="number" class="form-control" ngModel placeholder="id" ngModel name='id'> 
+     </div>
+     <div class="form-group">
+        <label for="gpa">Student Gpa : </label>
+        <input id="gpa"type="number" ngModel name='gpa' class="form-control" ngModel placeholder="gpa">
+     </div> <div class="form-group">
+        <label for="birthdate">Student BirthDate : </label>
+        <input id="birthdate"type="Date"  ngModel name='birthdate'class="form-control">
+     </div>
+     <button class="btm btn-primary" type="submit">Insert Student</button> 
+</form>  
+ -->
+<!-- <div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name"
+         required
+         [(ngModel)]="model.name" name="name">
+</div>
+
+<div class="form-group">
+  <label for="alterEgo">Alter Ego</label>
+  <input type="text"  class="form-control" id="alterEgo"
+         [(ngModel)]="model.alterEgo" name="alterEgo">
+</div>
+
+<div class="form-group">
+  <label for="power">Hero Power</label>
+  <select class="form-control"  id="power"
+          required
+          [(ngModel)]="model.power" name="power">
+    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+  </select>
+</div> -->
+<nav>School Mangment system</nav>
+<div class="form" [formGroup] = "studentform" >
+  <div class="form-controle" >
+    <label id="pad">Student Name</label>
+    <input type="text" formControlName = "name" [formNoValidate] = "true" />
+  </div>
+  <div class="form-controle">
+    <label id="pad1" >Student ID</label>
+    <input type="number"  formControlName = "id" [formNoValidate] = "true"/>
+  </div>
+
+  <div class="form-controle">
+    <label id="pad2">Student gpa</label>
+    <input type="number"  formControlName = "gpa" [formNoValidate] = "true"/>
+  </div>
+  <div class="form-controle">
+    <label id="pad3">Student BirthDate</label>
+    <input type="date"  formControlName = "birth" [formNoValidate] = "true"/>
+  </div>
+
+  <br><br>
+   <button   id="but" (click) ="getdata()">insert Student</button>
+  <button   id="but1" (click)="showlist()">Show list of student</button>
+  <button   id="but2" >edit Student</button>
+  <button   id="but3" >Delete Student</button></div>
+<br><br><br>
+  <div *ngFor="let student of studentlist" id="list" >
+<span>name:{{student.name}} ,</span>
+<span>id : {{student.id}} ,</span>
+<span>Birthdate :{{student.date}} ,</span>
+<span>gpa {{student.gpa}} ,</span>
+<span>register date:{{student.regester}}</span>
+<br><br>
+</div>

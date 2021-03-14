@@ -1,0 +1,11 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing:border-box ;
+    background-attachment: fixed;
+    background-color:whitesmoke;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
